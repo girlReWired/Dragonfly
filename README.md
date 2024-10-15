@@ -23,6 +23,7 @@ and the results are shown only after everyone has voted.
 - Flask (installed via `pip install flask`)
 - Any modern web browser (Chrome, Firefox, Edge, etc.)
 - A stable internet connection (for real-world use)
+- Users must be on the same network in order to participate
 
 ## How It Works
 
