@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll {{ poll_number }}</title>
+</head>
+<body>
+    <h1>Poll {{ poll_number }}</h1>
+    <p>{{ poll.question }}</p>
+    <form method="POST">
+        {% for option in poll.options %}
+        <input type="radio" name="option" value="{{ option }}" required> {{ option }}<br>
+        {% endfor %}
+        <button type="submit">Submit Vote</button>
+    </form>
+</body>
+</html>
+
