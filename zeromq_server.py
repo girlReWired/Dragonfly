@@ -1,5 +1,3 @@
-# zeromq_server.py
-
 import zmq
 import time
 from multiprocessing import Process
