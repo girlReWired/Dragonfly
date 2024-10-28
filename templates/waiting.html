@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting</title>
+    <script>
+        function checkVotes() {
+            // This function checks if all players have voted
+            fetch('/check_votes')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.all_voted) {
+                        window.location.href = '/final_results';  // Redirect to results if all players have voted
+                    }
+                });
+        }
+
+        // Every 2 seconds, the system checks for completion
+        setInterval(checkVotes, 2000);
+    </script>
+</head>
+<body>
+    <h1>Waiting for the other players to finish voting...</h1>
+    <p>Once everyone submits their votes, you will see the final results.</p>
+</body>
+</html>
+
+
+
